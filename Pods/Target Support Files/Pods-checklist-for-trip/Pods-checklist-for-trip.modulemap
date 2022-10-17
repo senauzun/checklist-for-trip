@@ -1,0 +1,6 @@
+framework module Pods_checklist_for_trip {
+  umbrella header "Pods-checklist-for-trip-umbrella.h"
+
+  export *
+  module * { export * }
+}
