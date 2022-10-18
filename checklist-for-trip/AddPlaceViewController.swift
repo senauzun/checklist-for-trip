@@ -24,6 +24,7 @@ class AddPlaceViewController: UIViewController ,UIImagePickerControllerDelegate 
             let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(chooseImage))
         imageView.addGestureRecognizer(gestureRecognizer)
 
+        navigationController?.navigationBar.topItem?.leftBarButtonItem = UIBarButtonItem(title: "< Back", style: UIBarButtonItem.Style.plain, target: self, action: #selector(backButtonClicked))
     }
     
     @objc func chooseImage(){
@@ -56,6 +57,10 @@ class AddPlaceViewController: UIViewController ,UIImagePickerControllerDelegate 
             alert.addAction(okButton)
             self.present(alert, animated: true)
         }
+    }
+    
+    @objc func backButtonClicked(){
+        self.dismiss(animated: true)
     }
     
 

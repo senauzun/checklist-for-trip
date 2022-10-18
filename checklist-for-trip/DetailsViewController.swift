@@ -11,7 +11,10 @@ import Parse
 
 class DetailsViewController: UIViewController , MKMapViewDelegate {
 
-    
+    var detailslaceId = ""
+    var placeNameArray = [String]()
+    var placeIdArray = [String]()
+
     @IBOutlet weak var placenameLabel: UILabel!
     @IBOutlet weak var categoryLabel: UILabel!
     
@@ -21,6 +24,7 @@ class DetailsViewController: UIViewController , MKMapViewDelegate {
     @IBOutlet weak var mapView: MKMapView!
     
     var chosenPlaceId = ""
+    
     var chosenLatitude = Double()
     var chosenLongitude = Double()
     override func viewDidLoad() {
@@ -28,8 +32,10 @@ class DetailsViewController: UIViewController , MKMapViewDelegate {
         
         getDataFromParseForDetails()
         mapView.delegate = self
+        
 
     }
+
     
     func getDataFromParseForDetails(){
         
@@ -137,4 +143,19 @@ class DetailsViewController: UIViewController , MKMapViewDelegate {
         }
     }
 
+        @IBAction func markAsVisited(_ sender: Any) {
+            
+            let object = PFObject(className: "VisitedPlaces")
+            object["name"] = placenameLabel.text
+            object.saveInBackground { success, error in
+                if error != nil {
+                    let alert = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: UIAlertController.Style.alert)
+                    let okButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
+                    alert.addAction(okButton)
+                    self.present(alert , animated: true)
+                }else {
+                    self.performSegue(withIdentifier: "toVisitedVC", sender: nil)
+                }
+            }
+        }
 }

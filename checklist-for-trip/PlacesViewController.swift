@@ -109,6 +109,7 @@ class PlacesViewController: UIViewController , UITableViewDelegate , UITableView
         self.present(alert , animated: true , completion: nil)
     }
     
+    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
             if editingStyle == .delete{
                 let query = PFQuery(className: "Places")
@@ -136,6 +137,6 @@ class PlacesViewController: UIViewController , UITableViewDelegate , UITableView
                 }
                     
             }
-            
+   
         }
 }

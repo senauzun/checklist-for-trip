@@ -19,6 +19,7 @@
 		B874C85B28FB5AE0003DFF7C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B874C85A28FB5AE0003DFF7C /* MapViewController.swift */; };
 		B8D7B3E728FB64B800AE91C9 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D7B3E628FB64B800AE91C9 /* DetailsViewController.swift */; };
 		B8D7B3E928FB6C3300AE91C9 /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D7B3E828FB6C3300AE91C9 /* PlaceModel.swift */; };
+		B8D7B3EB28FE06A900AE91C9 /* VisitedPlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D7B3EA28FE06A900AE91C9 /* VisitedPlacesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		B874C85A28FB5AE0003DFF7C /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		B8D7B3E628FB64B800AE91C9 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		B8D7B3E828FB6C3300AE91C9 /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
+		B8D7B3EA28FE06A900AE91C9 /* VisitedPlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitedPlacesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				B872A17128FB35C800C97D09 /* Assets.xcassets */,
 				B872A17328FB35C800C97D09 /* LaunchScreen.storyboard */,
 				B872A17628FB35C800C97D09 /* Info.plist */,
+				B8D7B3EA28FE06A900AE91C9 /* VisitedPlacesViewController.swift */,
 			);
 			path = "checklist-for-trip";
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B874C85928FB54EA003DFF7C /* AddPlaceViewController.swift in Sources */,
+				B8D7B3EB28FE06A900AE91C9 /* VisitedPlacesViewController.swift in Sources */,
 				B8D7B3E928FB6C3300AE91C9 /* PlaceModel.swift in Sources */,
 				B874C85B28FB5AE0003DFF7C /* MapViewController.swift in Sources */,
 				B874C85728FB4587003DFF7C /* PlacesViewController.swift in Sources */,
